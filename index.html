@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SightGuide XR — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121c2e;
+      --text: #f3f7ff;
+      --muted: #b8c7e0;
+      --accent: #4be0ff;
+      --warn: #ffb84d;
+      --border: #253654;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 2rem 1rem 4rem;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "Noto Sans JP", sans-serif;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem 2.2rem;
+    }
+    h1, h2 { color: var(--accent); line-height: 1.3; }
+    h1 { margin-top: 0; font-size: 2rem; }
+    h2 { margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    .badge {
+      display: inline-block;
+      background: rgba(75, 224, 255, 0.14);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .callout {
+      background: rgba(255, 184, 77, 0.1);
+      border-left: 4px solid var(--warn);
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      margin: 1.2rem 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: rgba(75, 224, 255, 0.1); color: var(--accent); }
+    p, li { color: var(--text); }
+    .muted { color: var(--muted); font-size: 0.95rem; }
+    code {
+      background: rgba(255,255,255,0.08);
+      padding: 0.12rem 0.35rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <main role="main">
+    <h1>SightGuide XR — Privacy Policy</h1>
+    <p class="muted">
+      <strong>Effective Date:</strong> November 25, 2026 &nbsp;|&nbsp;
+      <strong>Package:</strong> <code>com.sightguide.xr</code> &nbsp;|&nbsp;
+      <strong>Platform:</strong> Meta Quest 3 / Meta Quest 3S
+    </p>
+    <div>
+      <span class="badge">100% On-Device Offline AI</span>
+      <span class="badge">Zero Camera Uploads</span>
+      <span class="badge">Zero Image Storage</span>
+      <span class="badge">Free Forever</span>
+    </div>
+
+    <h2>1. Core Privacy Promise</h2>
+    <p>
+      <strong>SightGuide XR</strong> is a free, offline-first Mixed Reality visual assistive companion and blind-empathy experience.
+      <strong>We collect, store, sell, and transmit ZERO personal data.</strong>
+      All artificial intelligence models—scene description, object search, text recognition (OCR), voice recognition,
+      speech synthesis, QR scanning, and depth safety scanning—execute <strong>100% locally on your Quest headset</strong>.
+    </p>
+
+    <h2>2. Sensor &amp; Permission Usage Disclosure</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Permission / Sensor</th>
+          <th>Purpose</th>
+          <th>Saved to Disk?</th>
+          <th>Uploaded?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Passthrough Camera</strong><br><code>HEADSET_CAMERA</code>, <code>CAMERA</code></td>
+          <td>Volatile RAM-only frame processing when the user asks to describe the scene, find an object, read printed text (OCR), point-and-read, detect color/light, or scan QR/barcodes.</td>
+          <td><strong>No — Never.</strong> Frames are discarded immediately after inference.</td>
+          <td><strong>No — Never.</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Environment Depth</strong><br><code>USE_SCENE</code></td>
+          <td>Real-time local floor obstacle, stair, downward drop-off warning, and 3D distance measurement.</td>
+          <td><strong>No.</strong> Volatile RAM only.</td>
+          <td><strong>No — Never.</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Hand Tracking</strong><br><code>HAND_TRACKING</code></td>
+          <td>Local tactile double-tap gestures, fingertip point-and-read, arm-shadow masking, and 3D target reach detection.</td>
+          <td><strong>No.</strong></td>
+          <td><strong>No — Never.</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Microphone</strong><br><code>RECORD_AUDIO</code></td>
+          <td>100% offline hands-free voice command recognition and local AI chat.</td>
+          <td><strong>No.</strong> No voice recordings are saved.</td>
+          <td><strong>No — Never.</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Internet</strong><br><code>INTERNET</code></td>
+          <td>Strictly user-initiated only: fetching a scanned QR webpage URL when you ask to read/open it, or processing a voluntary $1.00 Meta Horizon Store supporter tip.</td>
+          <td>No browsing history saved.</td>
+          <td>Only the explicit URL you choose to open, or official Meta Store Billing.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Local Preferences Only</h2>
+    <p>
+      SightGuide XR stores only non-identifying preferences locally on your headset (<code>android:allowBackup="false"</code>):
+      preferred language (English, Chinese, or Japanese), speech speed, voice selection, onboarding completion state,
+      and calibrated standing eye height (a single number in meters). You can delete all local data anytime via
+      <strong>Meta Quest Settings &rarr; Storage &rarr; SightGuide XR &rarr; Clear App Data</strong> or by uninstalling.
+    </p>
+
+    <h2>4. No Ads, No Accounts, No Analytics</h2>
+    <p>
+      SightGuide XR has zero ads, zero user accounts, zero cloud telemetry, and zero third-party analytics SDKs.
+      Optional voluntary $1.00 repeatable supporter tips (<code>supporter_tip_1usd</code>) are processed solely by
+      Meta Horizon Store Billing; the developer never receives payment or billing information.
+    </p>
+
+    <div class="callout" role="note">
+      <strong>Important Safety Notice:</strong> SightGuide XR is strictly an indoor assistive tool and empathy experience.
+      It is <strong>NOT</strong> a medical device and <strong>CANNOT</strong> replace a white cane, guide dog, sighted guide,
+      or professional mobility training. Always move carefully in safe, uncluttered indoor areas.
+    </div>
+
+    <h2>5. Contact &amp; Feedback</h2>
+    <p>
+      Questions, privacy inquiries, or feature suggestions? Please contact the developer at:
+      <strong><a href="mailto:dty6652909@gmail.com" style="color: var(--accent);">dty6652909@gmail.com</a></strong>
+    </p>
+  </main>
+</body>
+</html>
