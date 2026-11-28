@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SightGuide XR — Privacy Policy</title>
+  <title>SightGuide XR — Privacy Policy &amp; Data Deletion</title>
   <style>
     :root {
       --bg: #0b1220;
@@ -11,6 +11,7 @@
       --text: #f3f7ff;
       --muted: #b8c7e0;
       --accent: #4be0ff;
+      --green: #4de3a1;
       --warn: #ffb84d;
       --border: #253654;
     }
@@ -22,19 +23,20 @@
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "Noto Sans JP", sans-serif;
       line-height: 1.7;
-      font-size: 17px;
+      font-size: 16.5px;
     }
     main {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 2rem 2.2rem;
     }
-    h1, h2 { color: var(--accent); line-height: 1.3; }
+    h1, h2, h3 { color: var(--accent); line-height: 1.3; }
     h1 { margin-top: 0; font-size: 2rem; }
-    h2 { margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    h2 { margin-top: 2.1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    h3 { margin-top: 1.3rem; font-size: 1.12rem; color: #8ceeff; }
     .badge {
       display: inline-block;
       background: rgba(75, 224, 255, 0.14);
@@ -42,7 +44,7 @@
       color: var(--accent);
       padding: 0.25rem 0.7rem;
       border-radius: 999px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
       margin-right: 0.5rem;
       margin-bottom: 0.5rem;
@@ -54,10 +56,19 @@
       border-radius: 8px;
       margin: 1.2rem 0;
     }
+    .deletion-box {
+      background: rgba(77, 227, 161, 0.08);
+      border: 1px solid rgba(77, 227, 161, 0.45);
+      border-left: 4px solid var(--green);
+      padding: 1.1rem 1.3rem;
+      border-radius: 8px;
+      margin: 1.2rem 0;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
       margin: 1rem 0;
+      font-size: 0.95rem;
     }
     th, td {
       border: 1px solid var(--border);
@@ -67,6 +78,7 @@
     }
     th { background: rgba(75, 224, 255, 0.1); color: var(--accent); }
     p, li { color: var(--text); }
+    a { color: var(--accent); }
     .muted { color: var(--muted); font-size: 0.95rem; }
     code {
       background: rgba(255,255,255,0.08);
@@ -80,95 +92,224 @@
   <main role="main">
     <h1>SightGuide XR — Privacy Policy</h1>
     <p class="muted">
-      <strong>Effective Date:</strong> November 25, 2026 &nbsp;|&nbsp;
+      <strong>Last Updated &amp; Effective Date:</strong> November 28, 2026 &nbsp;|&nbsp;
       <strong>Package:</strong> <code>com.sightguide.xr</code> &nbsp;|&nbsp;
-      <strong>Platform:</strong> Meta Quest 3 / Meta Quest 3S
+      <strong>Platform:</strong> Meta Quest 3 / Meta Quest 3S &nbsp;|&nbsp;
+      <strong>Data Controller:</strong> Deng Tianyi
     </p>
     <div>
       <span class="badge">100% On-Device Offline AI</span>
       <span class="badge">Zero Camera Uploads</span>
-      <span class="badge">Zero Image Storage</span>
-      <span class="badge">Free Forever</span>
+      <span class="badge">Meta Platform IAP Disclosed</span>
+      <span class="badge">User Data Deletion Available</span>
     </div>
 
-    <h2>1. Core Privacy Promise</h2>
+    <h2>1. Overview &amp; Scope</h2>
     <p>
-      <strong>SightGuide XR</strong> is a free, offline-first Mixed Reality visual assistive companion and blind-empathy experience.
-      <strong>We collect, store, sell, and transmit ZERO personal data.</strong>
-      All artificial intelligence models—scene description, object search, text recognition (OCR), voice recognition,
-      speech synthesis, QR scanning, and depth safety scanning—execute <strong>100% locally on your Quest headset</strong>.
+      <strong>SightGuide XR</strong> is a free, offline-first Mixed Reality visual assistive companion and blind-empathy
+      experience developed and operated by <strong>Deng Tianyi</strong> (Data Controller). All AI models—scene
+      description, 3D object search, text recognition (OCR), voice recognition, speech synthesis, QR scanning, and
+      hardware depth safety alerts—execute <strong>100% locally on your Meta Quest headset</strong> with zero developer
+      cloud servers.
+    </p>
+    <p>
+      Because SightGuide XR accesses official <strong>Meta Horizon Platform Services</strong> (App Entitlement
+      Verification and optional In-App Purchases / IAP) and processes <strong>on-device headset sensor inputs</strong>,
+      this Privacy Policy clearly explains: (a) what specific data is collected or processed, (b) how and why that data
+      is used, (c) how long it is retained and whether it is shared, and (d) how users can request deletion of their data.
     </p>
 
-    <h2>2. Sensor &amp; Permission Usage Disclosure</h2>
+    <h2>2. What Specific Data Is Collected or Processed &amp; How It Is Used</h2>
+
+    <h3>2.1 Meta Horizon Platform Data (In-App Purchases / IAP &amp; App Entitlement)</h3>
+    <p>
+      SightGuide XR is 100% free forever with no locked features. To comply with Meta Horizon Store requirements and to
+      support an optional, repeatable <strong>$1.00 Consumable Supporter Tip add-on</strong>
+      (<code>SKU: supporter_tip_1usd</code>), the app accesses the following specific Meta Horizon Platform data via the
+      official Meta Horizon Platform SDK:
+    </p>
     <table>
       <thead>
         <tr>
-          <th>Permission / Sensor</th>
-          <th>Purpose</th>
+          <th>Specific Data Collected / Processed</th>
+          <th>How the Data Is Used by SightGuide XR</th>
+          <th>Storage &amp; Retention</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <strong>In-App Purchase (IAP) Transaction Data</strong><br>
+            (Product SKU <code>supporter_tip_1usd</code>, Meta purchase/transaction ID, grant timestamp, product type,
+            and purchase consumption status returned by <code>IAP.launchCheckoutFlow</code>,
+            <code>IAP.getViewerPurchases</code>, and <code>IAP.consumePurchase</code>)
+          </td>
+          <td>
+            Used strictly to process a user-initiated voluntary $1.00 supporter tip checkout, immediately consume the
+            consumable item so users can optionally support again in the future, recover any unconsumed tip if the app
+            closes mid-checkout, and display an on-device thank-you count.
+            <br><br>
+            <em>Note:</em> Payment card numbers, billing addresses, and financial credentials are processed solely by
+            Meta Platforms, Inc. and are <strong>never</strong> received or accessed by SightGuide XR.
+          </td>
+          <td>
+            Purchase IDs and timestamps are processed transiently in volatile memory (RAM) during checkout/consumption
+            and are <strong>not</strong> stored on any developer server. Only a non-identifying numeric count of
+            completed voluntary tips is saved locally on your headset (<code>SharedPreferences</code>). Underlying store
+            purchase records are maintained by Meta Platforms, Inc. under Meta's Privacy Policy.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>App Entitlement Status</strong><br>
+            (Boolean verification response from <code>Entitlements.getIsViewerEntitled()</code>)
+          </td>
+          <td>
+            Used strictly on launch to verify that the headset account holds a valid Meta Horizon Store license
+            (including offline cached verification) as required by Meta Horizon Store security guidelines.
+          </td>
+          <td>
+            Checked transiently in RAM on launch; never stored or transmitted to developer servers.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>2.2 On-Device Headset Sensor &amp; Permission Data (Ephemeral RAM-Only Processing)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Permission / Sensor Data</th>
+          <th>How It Is Processed &amp; Used</th>
           <th>Saved to Disk?</th>
           <th>Uploaded?</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Passthrough Camera</strong><br><code>HEADSET_CAMERA</code>, <code>CAMERA</code></td>
-          <td>Volatile RAM-only frame processing when the user asks to describe the scene, find an object, read printed text (OCR), point-and-read, detect color/light, or scan QR/barcodes.</td>
-          <td><strong>No — Never.</strong> Frames are discarded immediately after inference.</td>
+          <td><strong>Passthrough Camera Frames</strong><br><code>HEADSET_CAMERA</code>, <code>CAMERA</code></td>
+          <td>Processed locally in volatile RAM only when the user requests scene description, 3D object finding, OCR text reading, fingertip point-and-read, color/light detection, or QR/barcode scanning.</td>
+          <td><strong>No — Never.</strong> Discarded immediately after millisecond inference.</td>
           <td><strong>No — Never.</strong></td>
         </tr>
         <tr>
-          <td><strong>Environment Depth</strong><br><code>USE_SCENE</code></td>
-          <td>Real-time local floor obstacle, stair, downward drop-off warning, and 3D distance measurement.</td>
+          <td><strong>Environment Depth Maps</strong><br><code>USE_SCENE</code></td>
+          <td>Local <code>128&times;128</code> hardware depth scanning in RAM for indoor floor obstacle detection, stair/drop-off warnings, eye-height floor calibration, and 3D object distances.</td>
           <td><strong>No.</strong> Volatile RAM only.</td>
           <td><strong>No — Never.</strong></td>
         </tr>
         <tr>
-          <td><strong>Hand Tracking</strong><br><code>HAND_TRACKING</code></td>
-          <td>Local tactile double-tap gestures, fingertip point-and-read, arm-shadow masking, and 3D target reach detection.</td>
+          <td><strong>Hand Tracking Poses</strong><br><code>HAND_TRACKING</code></td>
+          <td>26-joint local hand coordinates used strictly for tactile double-tap gestures, fingertip point-and-read targeting, arm-shadow depth masking, and 3D target touch detection.</td>
           <td><strong>No.</strong></td>
           <td><strong>No — Never.</strong></td>
         </tr>
         <tr>
-          <td><strong>Microphone</strong><br><code>RECORD_AUDIO</code></td>
-          <td>100% offline hands-free voice command recognition and local AI chat.</td>
-          <td><strong>No.</strong> No voice recordings are saved.</td>
+          <td><strong>Microphone Audio Stream</strong><br><code>RECORD_AUDIO</code></td>
+          <td>100% offline on-device voice activity detection and speech recognition (Silero VAD + SenseVoiceSmall) for hands-free voice control and local AI chat.</td>
+          <td><strong>No.</strong> Zero audio recordings are saved.</td>
           <td><strong>No — Never.</strong></td>
         </tr>
         <tr>
-          <td><strong>Internet</strong><br><code>INTERNET</code></td>
-          <td>Strictly user-initiated only: fetching a scanned QR webpage URL when you ask to read/open it, or processing a voluntary $1.00 Meta Horizon Store supporter tip.</td>
+          <td><strong>Network Access</strong><br><code>INTERNET</code></td>
+          <td>Used strictly for (1) official Meta Horizon Platform SDK entitlement and voluntary IAP calls, and (2) fetching a scanned QR code webpage URL only when the user explicitly says <em>&ldquo;Read webpage&rdquo;</em> or <em>&ldquo;Open link&rdquo;</em>.</td>
           <td>No browsing history saved.</td>
-          <td>Only the explicit URL you choose to open, or official Meta Store Billing.</td>
+          <td>Only to Meta Platform Billing or the explicit QR URL chosen by the user.</td>
         </tr>
       </tbody>
     </table>
 
-    <h2>3. Local Preferences Only</h2>
-    <p>
-      SightGuide XR stores only non-identifying preferences locally on your headset (<code>android:allowBackup="false"</code>):
-      preferred language (English, Chinese, or Japanese), speech speed, voice selection, onboarding completion state,
-      and calibrated standing eye height (a single number in meters). You can delete all local data anytime via
-      <strong>Meta Quest Settings &rarr; Storage &rarr; SightGuide XR &rarr; Clear App Data</strong> or by uninstalling.
-    </p>
+    <h3>2.3 Local On-Device Preferences &amp; Voluntary Support Emails</h3>
+    <ul>
+      <li>
+        <strong>Local Headset Preferences (<code>SharedPreferences</code>, <code>android:allowBackup="false"</code>):</strong>
+        Stores selected language (English, Chinese, or Japanese), speech speed, voice selection, scene description mode,
+        tutorial completion state, calibrated standing eye height (a single numeric value in meters), and the local
+        count of completed voluntary supporter tips. Stored exclusively on your headset to remember your setup between
+        sessions.
+      </li>
+      <li>
+        <strong>Voluntary Support Correspondence:</strong> If you email
+        <a href="mailto:dty6652909@gmail.com">dty6652909@gmail.com</a> for support, feedback, or privacy inquiries, we
+        collect your email address and message content solely to respond to and resolve your request.
+      </li>
+    </ul>
 
-    <h2>4. No Ads, No Accounts, No Analytics</h2>
+    <h2>3. Data Sharing, Third Parties &amp; Retention</h2>
+    <ul>
+      <li><strong>No Third-Party Data Processors or Sales:</strong> We do <strong>not</strong> sell, rent, trade, or share user data with third-party advertisers, analytics providers, data brokers, or external data processors.</li>
+      <li><strong>No Ads &amp; No Tracking SDKs:</strong> SightGuide XR contains zero advertisements, zero user-account logins, and zero third-party telemetry or crash-tracking SDKs.</li>
+      <li><strong>Platform Billing Provider:</strong> Official Meta Horizon Store entitlement checks and voluntary IAP transactions interact directly with Meta Platforms, Inc. via the Meta Horizon Platform SDK.</li>
+      <li><strong>Retention:</strong> Ephemeral camera, depth, hand-tracking, and voice data are retained for <strong>0 seconds</strong> after local inference. Local on-device preferences persist only until you clear app data or uninstall the app. Support emails are retained only as long as necessary to address your inquiry or until you request deletion.</li>
+    </ul>
+
+    <h2 id="data-deletion">4. How to Request Deletion of Your Data</h2>
+    <div class="deletion-box" role="region" aria-label="User Data Deletion Instructions">
+      <p><strong>You have the right to request deletion of any data associated with your use of SightGuide XR at any time:</strong></p>
+      <ol>
+        <li>
+          <strong>Email Data Deletion Request (Developer Records &amp; Support Emails):</strong>
+          Send an email to
+          <strong><a href="mailto:dty6652909@gmail.com?subject=Data%20Deletion%20Request%20-%20SightGuide%20XR">dty6652909@gmail.com</a></strong>
+          with the subject line <code>Data Deletion Request - SightGuide XR</code>. Please include the email address you
+          contacted us from (and, if inquiring about a voluntary supporter tip, your Meta display name or purchase/order
+          ID). Because SightGuide XR operates zero external backend servers, we hold no cloud profiles; we will
+          permanently delete any developer-held emails or records and confirm completion in writing within
+          <strong>7 business days</strong> (and always within 30 calendar days).
+        </li>
+        <li>
+          <strong>Instant On-Device Deletion (Local Preferences &amp; Local Tip Count):</strong>
+          You can immediately and permanently delete all data stored locally by SightGuide XR on your headset by opening
+          <strong>Meta Quest Settings &rarr; Storage &rarr; SightGuide XR &rarr; Clear App Data</strong>, or by
+          uninstalling SightGuide XR.
+        </li>
+        <li>
+          <strong>Meta Horizon Store Account &amp; IAP Transaction Records:</strong>
+          Underlying Meta Horizon Store account and payment records are hosted and managed by Meta Platforms, Inc. You
+          may view, manage, or request deletion of your Meta platform and purchase records directly via the
+          <a href="https://accountscenter.meta.com/" target="_blank" rel="noopener noreferrer">Meta Accounts Center</a>.
+        </li>
+      </ol>
+    </div>
+
+    <h2>5. Age Rating &amp; Children's Privacy</h2>
     <p>
-      SightGuide XR has zero ads, zero user accounts, zero cloud telemetry, and zero third-party analytics SDKs.
-      Optional voluntary $1.00 repeatable supporter tips (<code>supporter_tip_1usd</code>) are processed solely by
-      Meta Horizon Store Billing; the developer never receives payment or billing information.
+      SightGuide XR is self-certified for <strong>Teens and Adults (ages 13 and older, or the applicable age of digital
+      consent in your jurisdiction)</strong>. We do not knowingly collect personal information from children under 13.
+      If you believe a child has emailed us personal information, please contact
+      <a href="mailto:dty6652909@gmail.com">dty6652909@gmail.com</a> and we will promptly delete it.
     </p>
 
     <div class="callout" role="note">
-      <strong>Important Safety Notice:</strong> SightGuide XR is strictly an indoor assistive tool and empathy experience.
-      It is <strong>NOT</strong> a medical device and <strong>CANNOT</strong> replace a white cane, guide dog, sighted guide,
-      or professional mobility training. Always move carefully in safe, uncluttered indoor areas.
+      <strong>Important Safety Notice:</strong> SightGuide XR is strictly an indoor visual assistive companion and
+      blind-empathy experience. It is <strong>NOT</strong> a medical device and <strong>CANNOT</strong> replace a white
+      cane, guide dog, sighted guide, or professional mobility training. Always walk carefully in safe, uncluttered
+      indoor spaces and avoid holding your hands in front of the headset depth sensors while walking.
     </div>
 
-    <h2>5. Contact &amp; Feedback</h2>
+    <h2>6. Policy Changes &amp; Data Controller Contact</h2>
     <p>
-      Questions, privacy inquiries, or feature suggestions? Please contact the developer at:
-      <strong><a href="mailto:dty6652909@gmail.com" style="color: var(--accent);">dty6652909@gmail.com</a></strong>
+      If we update this Privacy Policy, we will post the revised policy on this page with an updated Effective Date.
+      For any privacy questions, data deletion requests, or accessibility feedback, please contact the Data Controller:
     </p>
+    <ul>
+      <li><strong>Data Controller / Developer:</strong> Deng Tianyi (SightGuide XR)</li>
+      <li><strong>Email:</strong> <strong><a href="mailto:dty6652909@gmail.com">dty6652909@gmail.com</a></strong></li>
+    </ul>
+
+    <h2>7. 隐私政策与数据删除机制简要说明（中文）</h2>
+    <ul>
+      <li><strong>Meta 平台内购与授权数据处理</strong>：本应用永久免费、无任何付费门槛。仅当您自愿购买 1 美元消耗型打赏扩展包（<code>supporter_tip_1usd</code>）或启动应用进行商店授权校验时，应用会通过官方 Meta Horizon Platform SDK 瞬时处理您的<strong>商品 SKU、Meta 交易/购买编号、授予时间、核销状态及应用授权状态</strong>，严格用于完成并核销自愿打赏及防止盗版校验。我们绝不接触您的银行卡/账单信息，绝不搭建云端服务器存储用户数据，绝不向第三方出售或共享数据。</li>
+      <li><strong>本地传感器与 AI 推理零上传</strong>：透视摄像头（<code>HEADSET_CAMERA</code>）、深度传感器（<code>USE_SCENE</code>）、手势（<code>HAND_TRACKING</code>）与麦克风语音（<code>RECORD_AUDIO</code>）全部在 Quest 3 本地临时内存（RAM）瞬时处理后立即销毁，零落盘、零上传。</li>
+      <li><strong>用户数据删除方式</strong>：① 发送邮件至 <a href="mailto:dty6652909@gmail.com">dty6652909@gmail.com</a>（主题注明 <code>Data Deletion Request - SightGuide XR</code>），开发者将在 7 个工作日内彻底删除相关往来记录并书面回复确认；② 在头显「设置 → 存储空间 → SightGuide XR → 清除应用数据」或卸载应用，即可即时清除全部本机偏好与打赏计数；③ Meta 商店账单记录可在 Meta 账户中心（<code>accountscenter.meta.com</code>）直接管理与申请删除。</li>
+    </ul>
+
+    <h2>8. プライバシーポリシーおよびデータ削除手続きの概要（日本語）</h2>
+    <ul>
+      <li><strong>Meta プラットフォームIAP・認証データの取り扱い</strong>：本アプリは全機能永久無料です。任意の1ドル応援チップ（<code>supporter_tip_1usd</code>）購入時や起動時のストア認証時に、公式 Meta Horizon Platform SDK を通じて<strong>商品SKU、取引ID、付与日時、消費ステータス、ライセンス認証結果</strong>を一時メモリ（RAM）上で処理します。これらは決済完了・消費処理および正規インストール確認のみに使用し、開発者サーバーへの保存や第三者への提供・販売は一切行いません。</li>
+      <li><strong>端末内センサー処理</strong>：カメラ映像・深度・ハンドトラッキング・音声はすべて端末内RAMで即時処理後に破棄され、保存や外部送信は一切行いません。</li>
+      <li><strong>データ削除のリクエスト方法</strong>：① <a href="mailto:dty6652909@gmail.com">dty6652909@gmail.com</a> 宛に件名 <code>Data Deletion Request - SightGuide XR</code> でメールをお送りいただければ、7営業日以内に開発者側で保持する問い合わせ記録等を完全削除しご報告します。② Quest 本体の「設定 → ストレージ → SightGuide XR → アプリデータを削除」またはアンインストールで端末内データを即時消去できます。③ Meta ストア購入履歴は Meta アカウントセンター（<code>accountscenter.meta.com</code>）より管理・削除申請が可能です。</li>
+    </ul>
   </main>
 </body>
 </html>
